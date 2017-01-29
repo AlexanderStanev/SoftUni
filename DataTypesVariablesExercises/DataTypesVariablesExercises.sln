@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Centuries to Nanoseconds", "10. Centuries to Nanoseconds\10. Centuries to Nanoseconds.csproj", "{81C7355D-40DC-4850-9ED8-88837957C1A5}"
 EndProject
@@ -23,8 +23,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19. Thea the Photographer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14. Integer to Hex and Binary", "14. Integer to Hex and Binary\14. Integer to Hex and Binary.csproj", "{6FB3EFCB-1392-403C-B6A3-35215C1202C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Practice Integer Numbers", "01. DataTypesVariablesExercises\01. Practice Integer Numbers.csproj", "{582C111D-B49A-405A-A1B9-7CB81B79FC16}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Practice Floating Point Numbers", "02. PracticeFloatingPointNumbers\02. Practice Floating Point Numbers.csproj", "{264045B8-A1F1-4DA4-8314-9F61EA04E856}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Practice Characters and Strings", "03. Practice Characters and Strings\03. Practice Characters and Strings.csproj", "{AC492C11-3BFE-46BD-A96E-678C330CC372}"
@@ -40,6 +38,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Employee Data", "08. Employee Data\08. Employee Data.csproj", "{D780AA75-2398-42BC-885F-9C095CFC0C2C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Reverse Characters", "09. Reverse Characters\09. Reverse Characters.csproj", "{82D14409-5381-478E-A544-7AD0B51177DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Practice Integer Numbers", "01. Practice Integer Numbers\01. Practice Integer Numbers.csproj", "{582C111D-B49A-405A-A1B9-7CB81B79FC16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,10 +87,6 @@ Global
 		{6FB3EFCB-1392-403C-B6A3-35215C1202C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FB3EFCB-1392-403C-B6A3-35215C1202C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FB3EFCB-1392-403C-B6A3-35215C1202C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Release|Any CPU.Build.0 = Release|Any CPU
 		{264045B8-A1F1-4DA4-8314-9F61EA04E856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{264045B8-A1F1-4DA4-8314-9F61EA04E856}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{264045B8-A1F1-4DA4-8314-9F61EA04E856}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -123,6 +119,10 @@ Global
 		{82D14409-5381-478E-A544-7AD0B51177DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82D14409-5381-478E-A544-7AD0B51177DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82D14409-5381-478E-A544-7AD0B51177DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582C111D-B49A-405A-A1B9-7CB81B79FC16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

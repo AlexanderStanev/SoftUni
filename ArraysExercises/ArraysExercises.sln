@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Largest Common End", "ArraysExercises\01. Largest Common End.csproj", "{0F1241AA-0DAA-4C1E-9A2D-44279C950857}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Rotate and Sum", "02. Rotate and Sum\02. Rotate and Sum.csproj", "{1489B548-58D0-4FCE-9C5D-C27431E084A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Fold and Sum", "03. Fold and Sum\03. Fold and Sum.csproj", "{69D20B32-F4D0-402A-9244-9BDDF8A3B44B}"
@@ -25,16 +23,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. Pairs by Difference", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. Equal Sums", "11. Equal Sums\11. Equal Sums.csproj", "{59B4A0CC-2834-4EAA-AF38-899A2D770EBC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Largest Common End", "01. Largest Common End\01. Largest Common End.csproj", "{0F1241AA-0DAA-4C1E-9A2D-44279C950857}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1489B548-58D0-4FCE-9C5D-C27431E084A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1489B548-58D0-4FCE-9C5D-C27431E084A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1489B548-58D0-4FCE-9C5D-C27431E084A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +71,10 @@ Global
 		{59B4A0CC-2834-4EAA-AF38-899A2D770EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59B4A0CC-2834-4EAA-AF38-899A2D770EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59B4A0CC-2834-4EAA-AF38-899A2D770EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1241AA-0DAA-4C1E-9A2D-44279C950857}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
