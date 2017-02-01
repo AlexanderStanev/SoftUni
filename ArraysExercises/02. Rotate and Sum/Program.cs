@@ -10,28 +10,37 @@ namespace RotateSum
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine();
+            var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var rotations = int.Parse(Console.ReadLine());
 
-            var stringArray = input.Split();
-
-            var numbersArray = new int[stringArray.Length];
-
-            for (int i = 0; i < stringArray.Length; i++)
+            var count = new int[numbers.Length];
+            for (int i = 0; i < numbers.Length; i++)
             {
-                numbersArray[i] = int.Parse(stringArray[i]);
+                count[i] = 0;
             }
 
-            int temp = numbersArray[numbersArray.Length-2];
-            for (int i = numbersArray.Length - 1; i >= 0; i--)
-            {
-                numbersArray[i] = temp;
-                temp = numbersArray[i - 1];
-            }
 
-            for (int i = 0; i < numbersArray.Length; i++)
+            for (int j = 0; j < rotations; j++)
             {
-                Console.WriteLine(numbersArray[i]);
+                var temp = numbers[numbers.Length - 1];
+                for (int i = numbers.Length - 1; i >= 0; i--)
+                {
+                    if (i != 0)
+                    {
+                        numbers[i] = numbers[i - 1];
+                        count[i] = count[i] + numbers[i];
+                    }
+                    else
+                    {
+                        numbers[i] = temp;
+                        count[i] = count[i] + numbers[i];
+                    }
+                }
+            }
+           
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                Console.Write($"{count[i]} ");
             }
         }
     }
