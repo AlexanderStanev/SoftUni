@@ -10,6 +10,24 @@ namespace _04.Fix_Emails
     {
         static void Main(string[] args)
         {
+            var firstInput = Console.ReadLine();
+
+            var emails = new Dictionary<string, string>();
+
+            while (firstInput != "stop")
+            {
+                var secondInput = Console.ReadLine();
+                if (!secondInput.Contains(".us") && !secondInput.Contains(".uk"))
+                {
+                    emails[firstInput] = secondInput;
+                }
+                firstInput = Console.ReadLine();
+            }
+
+            foreach (var email in emails)
+            {
+                Console.WriteLine($"{email.Key} -> {email.Value}");
+            }
         }
     }
 }
