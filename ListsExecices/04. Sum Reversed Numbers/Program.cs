@@ -8,24 +8,30 @@ namespace _04.Sum_Reversed_Numbers
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var input = Console.ReadLine().Split();
-            var numbers = new List<int>();
+            var numbers = Console.ReadLine().Split();
+            var reversedNumberList = new List<int>();
 
-            for (int i = 0; i < input.Length; i++)
+            foreach (var number in numbers)
             {
-                numbers.Add(int.Parse(input[i]));
+                reversedNumberList.Add(ReverseNumber(number));
             }
 
-            foreach (var number in input)
+            Console.WriteLine(string.Join("", reversedNumberList));
+        }
+
+        private static int ReverseNumber(string currentNumber)
+        {
+            var reversedNumberList = new List<char>();
+
+            for (int i = currentNumber.Length - 1; i >= 0; i--)
             {
-                foreach (var digit in number)
-                {
-                    //numbers.Add()
-                }
+                reversedNumberList.Add(currentNumber[i]);
             }
 
+            var reversedNumber = int.Parse(String.Join(" ", reversedNumberList));
+            return reversedNumber;
         }
     }
 }
