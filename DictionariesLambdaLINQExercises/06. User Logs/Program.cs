@@ -4,18 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IndexOfLetters
+namespace _06.User_Logs
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine();
-
-            foreach (var symbol in input)
-            {
-                Console.WriteLine($"{symbol} -> {symbol - 'a'}");
-            }
         }
     }
 }

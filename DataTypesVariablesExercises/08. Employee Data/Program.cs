@@ -13,14 +13,16 @@ namespace _8.Employee_Data
             string firstName = Console.ReadLine();
             string lastName = Console.ReadLine();
             int age = int.Parse(Console.ReadLine());
+            char gender = char.Parse(Console.ReadLine());
             long id = long.Parse(Console.ReadLine());
             long emplyeeNumber = long.Parse(Console.ReadLine());
 
-            Console.WriteLine(firstName);
-            Console.WriteLine(lastName);
-            Console.WriteLine(age);
-            Console.WriteLine(id);
-            Console.WriteLine(emplyeeNumber);
+            Console.WriteLine($"First name: {firstName}");
+            Console.WriteLine($"Last name: {lastName}");
+            Console.WriteLine($"Age: {age}");
+            Console.WriteLine($"Gender: {gender}");
+            Console.WriteLine($"Personal ID: {id}");
+            Console.WriteLine($"Unique Employee number: {emplyeeNumber}"); 
 
         }
     }

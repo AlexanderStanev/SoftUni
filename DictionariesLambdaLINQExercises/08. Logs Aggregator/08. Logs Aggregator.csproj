@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE85E1A2-E0DF-4A69-90D2-2FC3CBBE9037}</ProjectGuid>
+    <ProjectGuid>{AB1B73F9-097B-4D29-A11A-6803AE30C82E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_07.Max_Sequence_of_Increasing_Elements</RootNamespace>
-    <AssemblyName>_07.Max_Sequence_of_Increasing_Elements</AssemblyName>
+    <RootNamespace>_08.Logs_Aggregator</RootNamespace>
+    <AssemblyName>_08.Logs_Aggregator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,9 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs">
-      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

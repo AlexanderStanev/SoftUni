@@ -22,7 +22,7 @@ namespace _10.Centuries_to_Nanoseconds
             BigInteger microseconds = miliseconds * 1000;
             BigInteger nanoseconds = microseconds * 1000;
 
-            Console.WriteLine($"{centuries} centuries = {years} years = {days} days = {hours} hours = {minutes} minutes = {seconds} seconds = {miliseconds} milliseconds = {microseconds} = {nanoseconds} nanoseconds");
+            Console.WriteLine($"{centuries} centuries = {years} years = {days} days = {hours} hours = {minutes} minutes = {seconds} seconds = {miliseconds} milliseconds = {microseconds} microseconds = {nanoseconds} nanoseconds");
 
         }
     }

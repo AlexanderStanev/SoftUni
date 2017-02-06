@@ -9,21 +9,41 @@ namespace MostFrequentNumber
     class Program
     {
         static void Main(string[] args)
-        {
-            var input = Console.ReadLine().Split();
-            var numbers = new int[input.Length];
+        { // to fix
+            var numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            Array.Sort(numbers);
 
-            for (int i = 0; i < input.Length; i++)
+            var currentNumber = numbers[0];
+            var currentCount = 1;
+            var biggestCount = 0;
+            var biggestNumber = 0;
+
+            for (int i = 1; i < numbers.Length; i++)
             {
-                numbers[i] = int.Parse(input[i]);
+                if (currentNumber == numbers[i])
+                {
+                    currentCount++;
+                }
+                else
+                {
+                    if (currentCount > biggestCount)
+                    {
+                        biggestCount = currentCount;
+                        biggestNumber = numbers[i - 1];
+                    }
+                    currentCount = 1;
+                }
+
+                if (currentCount > biggestCount)
+                {
+                    biggestCount = currentCount;
+                    biggestNumber = numbers[i - 1];
+                }
+
+                currentNumber = numbers[i];
             }
 
-            var maxFrequencyCount = 0;
-            var maxFrequencyValue = 0;
-            for (int i = 0; i < numbers.Length ; i++)
-            {
-
-            }
+            Console.WriteLine(biggestNumber);
         }
     }
 }
