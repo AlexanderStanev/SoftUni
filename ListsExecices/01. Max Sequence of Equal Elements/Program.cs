@@ -10,29 +10,54 @@ namespace _01.Max_Sequence_of_Equal_Elements
     {
         static void Main(string[] args)
         {
-            var maxSequence = new List<int>();
+            var numbers = new List<int>();
             var input = Console.ReadLine().Split(new char[] {' '},StringSplitOptions.RemoveEmptyEntries);
 
             for (int i = 0; i < input.Length; i++)
             {
-                maxSequence.Add(int.Parse(input[i]));
+                numbers.Add(int.Parse(input[i]));
             }
 
-            foreach (var number in maxSequence)
-            {
-                Console.Write($"{number} ");
-            }
-            Console.WriteLine();
+            var currentNumber = numbers[0];
+            var currentCount = 1;
+            var bestCount = 0;
+            var startingIndex = 0;
+            var bestStartingIndex = 0;
+            var bestEndingIndex = 0;
 
-            var counters = new List<int>();
-            foreach (var number in maxSequence)
+            for (int i = 1; i < numbers.Count; i++)
             {
-                if (true)
+                if (currentNumber == numbers[i]) // if its the same number count++ to the current sequence
                 {
-
+                    currentCount++;
                 }
+                else // else check if this is sequence is better than the current one
+                {
+                    if (currentCount > bestCount) // if it is make the count the best count for now
+                    {
+                        bestCount = currentCount;
+                        bestStartingIndex = startingIndex;
+                        bestEndingIndex = i;
+                    }
+
+                    startingIndex = i;
+                    currentCount = 1;
+                }
+
+                currentNumber = numbers[i];
             }
 
+            if (currentCount > bestCount) // final check if the best sequence are the last numbers of the lsit
+            {
+                bestCount = currentCount;
+                bestStartingIndex = startingIndex;
+                bestEndingIndex = numbers.Count;
+            }
+
+            for (int i = bestStartingIndex; i < bestEndingIndex; i++)
+            {
+                Console.Write($"{numbers[i]} ");
+            }
         }
     }
 }
