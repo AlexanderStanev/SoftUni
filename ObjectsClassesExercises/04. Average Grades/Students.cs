@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace _04.Average_Grades
 {
-    class Students
+    public class Students
     {
+        public string Name
+        {
+            get; set;
+        }
+        public List<double> Grades
+        {
+            get; set;
+        }
+        public double AverageGrade
+        {
+            get
+            {
+                return Grades.Average();
+            }
+        }
     }
 }
