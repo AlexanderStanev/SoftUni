@@ -18,7 +18,13 @@ namespace _04.Sum_Reversed_Numbers
                 reversedNumberList.Add(ReverseNumber(number));
             }
 
-            Console.WriteLine(string.Join("", reversedNumberList));
+            var result = 0;
+            foreach (var number in reversedNumberList)
+            {
+                result += number;
+            }
+
+            Console.WriteLine(result);
         }
 
         private static int ReverseNumber(string currentNumber)
@@ -30,7 +36,7 @@ namespace _04.Sum_Reversed_Numbers
                 reversedNumberList.Add(currentNumber[i]);
             }
 
-            var reversedNumber = int.Parse(String.Join(" ", reversedNumberList));
+            var reversedNumber = int.Parse(String.Join("", reversedNumberList));
             return reversedNumber;
         }
     }

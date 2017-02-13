@@ -35,10 +35,10 @@ namespace _03.Array_Manipulator
 
                     case "addMany":
                         index = int.Parse(command[1]);
-                        for (int i = 1; i < command.Length - 1; i++)
+                        for (int i = 2; i <= command.Length - 1; i++)
                         {
-                            element = int.Parse(command[i + 1]);
-                            numbers.Insert(index + i - 1, element);
+                            element = int.Parse(command[i]);
+                            numbers.Insert(index + i - 2 , element);
                         }
 
                         break;
@@ -55,11 +55,17 @@ namespace _03.Array_Manipulator
 
                     case "shift":
                         positions = int.Parse(command[1]);
-                        var temp = numbers[0];
                         for (int i = 0; i < positions; i++)
                         {
-                            //numbers[] = numbers[]
+                            var temp = numbers[0];
+                            for (int j = 0; j < numbers.Count - 1; j++)
+                            {
+                                numbers[j] = numbers[j + 1];
+                            }
+
+                            numbers[numbers.Count - 1] = temp;
                         }
+
                         break;
 
                     case "sumPairs":
@@ -86,11 +92,8 @@ namespace _03.Array_Manipulator
                 command = Console.ReadLine().Split();
             }
 
-            foreach (var number in numbers)
-            {
-                Console.Write($"{number} ");
-            }
-            Console.WriteLine();
+            Console.WriteLine("[" + string.Join(", ", numbers) + "]");
+
         }
     }
 }

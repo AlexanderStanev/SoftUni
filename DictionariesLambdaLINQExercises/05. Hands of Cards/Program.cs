@@ -10,14 +10,9 @@ namespace _05.Hands_of_Cards
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split(':');
-
-            var playersCards = new Dictionary<string, List<string>>();
-            var playersPoints = new Dictionary<string, long>();
-
             var cardsPower = new Dictionary<char, int>
             {
-                {'1',1}, {'2',2}, {'3',3}, {'4',4},
+                {'2',2}, {'3',3}, {'4',4},
                 { '5',5}, {'6',6}, {'7',7},{'8',8},
                 { '9',9},  {'J',11}, { 'Q',12},
                 { 'K',13}, {'A',14}
@@ -28,44 +23,43 @@ namespace _05.Hands_of_Cards
                 {'S', 4}, {'H', 3}, {'D', 2}, {'C', 1}
             };
 
+            var input = Console.ReadLine().Split(':');
+
+            var playersCards = new Dictionary<string, List<string>>();
+            var playersPoints = new Dictionary<string, long>();
+
             var currentPlayer = input[0];
             while (currentPlayer != "JOKER")
             {
                 var currentPlayerCards = input[1];
-                var listOfCurrentCards = currentPlayerCards.Split(new[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                var listOfCurrentCards = currentPlayerCards.Split(", ".ToCharArray(),StringSplitOptions.RemoveEmptyEntries).ToList();
 
                 if (playersCards.ContainsKey(currentPlayer))
                 {
                     playersCards[currentPlayer] = playersCards[currentPlayer].Concat(listOfCurrentCards).Distinct().ToList();
                 }
-
                 else
                 {
                     playersCards[currentPlayer] = listOfCurrentCards;
                 }
 
                 input = Console.ReadLine().Split(':');
-                if (input[0] == "JOKER")
-                {
-                    break;
-                }
                 currentPlayer = input[0];
             }
 
             foreach (var player in playersCards)
             {
-                var currentPoints = 0l;
+                var currentPoints = 0L;
 
-                foreach (var card in player.Value)
+                foreach (var cardPair in player.Value)
                 {
-                    if (card.Length == 3)
+                    if (cardPair.Length == 3)
                     {
-                        currentPoints += 10 * cardsType[card[2]];
+                        currentPoints += 10 * cardsType[cardPair[2]];
                     }
-
                     else
                     {
-                        currentPoints += cardsPower[card[0]] * cardsType[card[1]];
+                        currentPoints += cardsPower[cardPair[0]] * cardsType[cardPair[1]];
                     }
                 }
 

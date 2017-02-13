@@ -19,7 +19,7 @@ namespace _03.A_Miner_Task
                 var secondInput = long.Parse(Console.ReadLine());
                 if (resources.ContainsKey(firstInput))
                 {
-                    resources[firstInput] =+ secondInput;
+                    resources[firstInput] += secondInput;
                 }
 
                 else
