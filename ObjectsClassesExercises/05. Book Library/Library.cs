@@ -18,5 +18,17 @@ namespace _05.Book_Library
             get;
             set;
         }
+        public double PriceOfAllBooks
+        {
+            get
+            {
+                double sum = 0;
+                foreach (var book in Books)
+                {
+                    sum += book.Price;
+                }
+                return sum;
+            }
+        }
     }
 }
