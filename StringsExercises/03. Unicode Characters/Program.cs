@@ -10,6 +10,13 @@ namespace _03.Unicode_Characters
     {
         static void Main(string[] args)
         {
+            var input = Console.ReadLine();
+
+            var output = string.Empty;
+            foreach (var character in input)
+            {
+                //output = output +
+            }
         }
     }
 }
