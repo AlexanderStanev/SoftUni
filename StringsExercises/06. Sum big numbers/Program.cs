@@ -15,28 +15,66 @@ namespace _06.Sum_big_numbers
 
             StringBuilder result = new StringBuilder();
 
+            var min = 0;
+            var max = 0;
 
-            var temp = 0;
-            var sumedDigit = 0;
-            var min = Math.Min(firstNumber.Length, secondNumber.Length);
-            for (int i = min - 1; i >= 0; i--)
+            var listOfAdditionalDigits = new List<int>();
+
+            if (firstNumber.Length > secondNumber.Length)
             {
-                var currentFirstNumberLastDigit = int.Parse(firstNumber.Substring(i - 1 , i));
-                var currentSecondNumberLastDigit =  int.Parse(secondNumber.Substring(i -1  , i));
-                var sumOfCurrentDigit = currentFirstNumberLastDigit + currentSecondNumberLastDigit; 
-                do
-                {
-                    sumedDigit += sumOfCurrentDigit % 10 + temp;
-                    temp = sumOfCurrentDigit / 10;
+                min = secondNumber.Length;
+                max = firstNumber.Length;
 
-                } while (sumedDigit >= 10);
+                listOfAdditionalDigits.AddRange(firstNumber.Substring(0, max - min).ToArray().Select(x => x - '0').Select(Convert.ToInt32));
+            }
+            else
+            {
+                min = firstNumber.Length;
+                max = secondNumber.Length;
 
-                result.Insert(0, sumedDigit);
+                listOfAdditionalDigits.AddRange(secondNumber.Substring(0, max - min).ToArray().Select(x => x - '0').Select(Convert.ToInt32));
+            }
+            listOfAdditionalDigits.Reverse();
+
+
+            var oneInMind = 0;
+            var currentLastDigit = 0;
+            var lastOneInMind = 0;
+            for (int i = 0; i < min; i++)
+            {
+                var currentFirstNumberLastDigit = firstNumber[firstNumber.Length - i - 1] - '0';
+                var currentSecondNumberLastDigit = secondNumber[secondNumber.Length - i - 1] - '0';
+                var sumOfCurrentDigits = currentFirstNumberLastDigit + currentSecondNumberLastDigit;
+
+                currentLastDigit = (sumOfCurrentDigits + oneInMind) % 10;
+                oneInMind = (sumOfCurrentDigits + oneInMind) / 10;
+
+                result.Insert(0, currentLastDigit);
+
+                lastOneInMind = oneInMind;
             }
 
-            if (temp != 0)
+            if (listOfAdditionalDigits.Count != 0)
             {
-                result.Insert(0, temp);
+                foreach (var digit in listOfAdditionalDigits)
+                {
+                    var sumOfDigitAndMind = digit + oneInMind;
+                    if (sumOfDigitAndMind >= 10)
+                    {
+                        result.Insert(0, (sumOfDigitAndMind) % 10);
+                        oneInMind = sumOfDigitAndMind / 10;
+                    }
+                    else
+                    {
+                        result.Insert(0, sumOfDigitAndMind);
+                        oneInMind = 0;
+                    }
+                }
+            }
+
+             if (oneInMind != 0)
+            {
+                result.Insert(0, oneInMind);
             }
 
             Console.WriteLine(result);
