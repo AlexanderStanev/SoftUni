@@ -13,8 +13,8 @@ namespace _01.Extract_Emails
         {//[ ]{1}([a-zA-Z0-9]+[.]*-*\w+@+[A-Za-z]+[-a-zA-Z]*\.{1}[a-zA-Z]+[.A-Za-z]*[-A-Za-z]*)[,.]
 
 
-            var input = Console.ReadLine();
-            var pattern = @"[ ]{1}([^ .\-_]+\.*-*\w+@+[A-Za-z]+[-a-zA-Z]*\.{1}[a-zA-Z]+[.A-Za-z]*[-A-Za-z]*)[,.]";
+            var input = Console.ReadLine().Trim();
+            var pattern = @"[ ]{1}([A-Za-z0-9]+\.{0,1}-{0,1}[A-Za-z0-9]+@+[A-Za-z]+[-a-zA-Z]*\.{1}[a-zA-Z]+[.A-Za-z]*[-A-Za-z]*)[,.]";
 
             Regex regex = new Regex(pattern);
 
