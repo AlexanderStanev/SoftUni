@@ -18,7 +18,7 @@ namespace _01.Sweet_Dessert
             var berriesPricePerKilo = decimal.Parse(Console.ReadLine());
 
             var portions = guests / 6;
-            if (guests % 2 != 0)
+            if (guests % 6 != 0)
             {
                 portions++;
             }

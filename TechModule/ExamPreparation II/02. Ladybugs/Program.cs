@@ -10,105 +10,55 @@ namespace _02.Ladybugs
     {
         static void Main(string[] args)
         {
-            var fieldSize = long.Parse(Console.ReadLine());
-            var indexesOfBugs = Console.ReadLine().Split(new [] {' '}, StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToList();
+            var fieldsCount = ushort.Parse(Console.ReadLine());
+            var ladybugs = Console.ReadLine().Split(new[] { ' ' },StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToList();
 
-            var listOfCurrentBugs = new long[fieldSize];
-            for (int i = 0; i < fieldSize - 1; i++)
+            var field = new byte[fieldsCount];
+
+            for (int i = 0; i < ladybugs.Count; i++)
             {
-                if (indexesOfBugs.Contains(i))
+                if (ladybugs[i] >= 0 && ladybugs[i] < fieldsCount)
                 {
-                    listOfCurrentBugs[i] = 1;
+                    field[ladybugs[i]] = 1;
                 }
+            }
+
+            var command = new List<string>();
+            while (true)
+            {
+                command = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
+                if (command[0] == "end") break;
+
+                var index = int.Parse(command[0]);
+                if (index < 0 || index >= fieldsCount) continue;
+                if (field[index] == 0) continue;
+
+                var flyLength = int.Parse(command[2]);
+
+                field[index] = 0;
+                var nextIndex = index;
+
+                if (command[1] == "left")
+                    nextIndex -= flyLength;
                 else
+                    nextIndex += flyLength;
+
+                while (nextIndex >= 0 && nextIndex < fieldsCount)
                 {
-                    listOfCurrentBugs[i] = 0;
-                }
-            }
-
-            var command = Console.ReadLine().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
-            while (command[0] != "end")
-            {
-                var bugStartingPosition = long.Parse(command[0]);
-
-                var bugDirection = command[1];
-                var bugFlyLenght = long.Parse(command[2]);
-
-                if (bugFlyLenght < 0)
-                {
-                    bugFlyLenght = Math.Abs(bugFlyLenght);
-                    if (bugDirection == "right")
+                    if (field[nextIndex] == 0)
                     {
-                        bugDirection = "left";
+                        field[nextIndex] = 1;
+                        break;
                     }
+
+                    if (command[1] == "left")
+                        nextIndex -= flyLength;
                     else
-                    {
-                        bugDirection = "right";
-                    }
+                        nextIndex += flyLength;
                 }
-
-                if (listOfCurrentBugs[bugStartingPosition] == 0)
-                {
-                    command = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                    continue;
-                }
-
-                var ladyBugIsOutOrFoundPlace = false;
-                if (bugDirection == "right" )
-                {
-                    var bugWannaBePosition = bugStartingPosition + bugFlyLenght;
-
-                    if (bugWannaBePosition >= fieldSize - 1)
-                    {
-                        listOfCurrentBugs[bugStartingPosition] = 0;
-                        command = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                        continue;
-                    }
-
-                    while (!ladyBugIsOutOrFoundPlace) // was listOfCurrentBugs[bugWannaBePosition] == 1 // 
-                    {
-                        bugWannaBePosition++;
-
-                        if (bugWannaBePosition >= fieldSize - 1)
-                        {
-                            listOfCurrentBugs[bugStartingPosition] = 0;
-                            command = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            continue;
-                        }
-                    }
-
-                    listOfCurrentBugs[bugStartingPosition] = 0;
-                    listOfCurrentBugs[bugWannaBePosition] = 1;
-                }
-                else // bugDiration == "left"
-                {
-                    var bugWannaBePosition = bugStartingPosition - bugFlyLenght;
-
-                    if (bugWannaBePosition < 0 )
-                    {
-                        listOfCurrentBugs[bugStartingPosition] = 0;
-                        command = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                        continue;
-                    }
-                    
-                    while (!ladyBugIsOutOrFoundPlace) // was listOfCurrentBugs[bugWannaBePosition] == 1 // 
-                    {
-                        bugWannaBePosition--;
-
-                        if (bugWannaBePosition < 0)
-                        {
-                            ladyBugIsOutOrFoundPlace = true;
-                        }
-                    }
-
-                    listOfCurrentBugs[bugStartingPosition] = 0;
-                    listOfCurrentBugs[bugWannaBePosition] = 1;
-                }
-
-            command = Console.ReadLine().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             }
 
-            Console.WriteLine(string.Join(" ", listOfCurrentBugs));
+            Console.WriteLine(string.Join(" ", field));
         }
     }
 }
