@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Reverse Numbers", "01. Reverse Numbers\01. Reverse Numbers.csproj", "{16F8377D-F37E-4D07-B302-22F93997CE24}"
 EndProject
@@ -12,6 +12,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Basic Queue Operations", "04. Basic Queue Operations\04. Basic Queue Operations.csproj", "{487FB820-8801-4AB0-A514-E64D40985C67}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Sequence With Queue", "05. Sequence With Queue\05. Sequence With Queue.csproj", "{27727101-60E6-494D-A95F-5B1DFF8DC774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Truck Tour", "06. Truck Tour\06. Truck Tour.csproj", "{DF331404-3C59-47A2-8844-6029F9C88438}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Balanced Parenthesis", "07. Balanced Parenthesis\07. Balanced Parenthesis.csproj", "{3525A762-1F58-4113-BA1E-6E8512E6240D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{27727101-60E6-494D-A95F-5B1DFF8DC774}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27727101-60E6-494D-A95F-5B1DFF8DC774}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27727101-60E6-494D-A95F-5B1DFF8DC774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF331404-3C59-47A2-8844-6029F9C88438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF331404-3C59-47A2-8844-6029F9C88438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF331404-3C59-47A2-8844-6029F9C88438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF331404-3C59-47A2-8844-6029F9C88438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3525A762-1F58-4113-BA1E-6E8512E6240D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3525A762-1F58-4113-BA1E-6E8512E6240D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3525A762-1F58-4113-BA1E-6E8512E6240D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3525A762-1F58-4113-BA1E-6E8512E6240D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

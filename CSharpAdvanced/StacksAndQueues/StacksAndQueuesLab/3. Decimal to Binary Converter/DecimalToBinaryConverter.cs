@@ -2,9 +2,6 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     class DecimalToBinaryConverter
     {
@@ -13,20 +10,29 @@
             var stack = new Stack<int>();
 
             var decimalNumberString = Console.ReadLine();
+            var decimalNumber = int.Parse(decimalNumberString);
 
             if (decimalNumberString == "0")
             {
                 Console.WriteLine(0);
+                return;
             }
 
             else
             {
-                for (int i = 0; i < decimalNumberString.Length; i++)
+                var flag = true;
+
+                do
                 {
-                    var currentDigit = decimalNumberString[i] - '0';
-                    var reminder = currentDigit % 2;
+                    if (decimalNumber == 1)
+                    {
+                        flag = false;
+                    }
+
+                    var reminder = decimalNumber % 2;
                     stack.Push(reminder);
-                }
+                    decimalNumber /= 2;
+                } while (flag);
             }
 
             foreach (var item in stack)
