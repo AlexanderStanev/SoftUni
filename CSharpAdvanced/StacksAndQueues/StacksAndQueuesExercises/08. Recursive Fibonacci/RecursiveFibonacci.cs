@@ -10,6 +10,14 @@ namespace RecursiveFibonacci
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(Fibonacci(int.Parse(Console.ReadLine())));
+        }
+
+        static int Fibonacci(int x)
+        {
+            if (x <= 2)
+                return 1;
+            return Fibonacci(x - 1) + Fibonacci(x - 2);
         }
     }
 }
