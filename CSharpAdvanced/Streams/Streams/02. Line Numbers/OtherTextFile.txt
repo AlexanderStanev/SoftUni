@@ -1,0 +1,13 @@
+﻿World-class applications need world-class development environments. For
+over 15 years, Visual Studio has been the Cadillac of integrated development
+environments. With features like Intellisense, an amazing debugger, and a rich
+ecosystem of partner add-ons, Visual Studio continues to push forward the
+concept of what an IDE should be.
+
+Developers who don’t need all the power of Visual Studio, or want a similar
+powerhouse experience on OSX or Linux, should look at using Visual Studio
+Code. Open source and cross platform, Code gives you an amazing coding
+experience in a smaller package. If you already have an editor and cannot be
+convinced to switch, then the Omnisharp plugin allows you to take the C#
+Intellisense experience with you into whichever editor you use.
+Is C# a good decision? The
