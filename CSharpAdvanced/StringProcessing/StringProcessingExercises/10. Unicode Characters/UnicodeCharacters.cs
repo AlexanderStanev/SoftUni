@@ -10,7 +10,15 @@ namespace UnicodeCharacters
     {
         static void Main(string[] args)
         {
+            var input = Console.ReadLine();
 
+            var output = string.Empty;
+            foreach (var character in input)
+            {
+                output += "\\u" + ((int)character).ToString("X").PadLeft(4, '0');
+            }
+
+            Console.WriteLine(output.ToLower());
         }
     }
 }

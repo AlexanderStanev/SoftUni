@@ -10,7 +10,15 @@ namespace ReverseString
     {
         static void Main(string[] args)
         {
-            var asdds = "";
+            var input = Console.ReadLine();
+            var sb = new StringBuilder();
+
+            foreach (var character in input)
+            {
+                sb.Insert(0, character);
+            }
+
+            Console.WriteLine(sb);
         }
     }
 }

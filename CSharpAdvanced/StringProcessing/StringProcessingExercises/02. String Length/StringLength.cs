@@ -10,6 +10,9 @@ namespace StringLength
     {
         static void Main(string[] args)
         {
+            var input = Console.ReadLine();
+
+            Console.WriteLine(input.PadRight(20,'*'));
         }
     }
 }
