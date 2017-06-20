@@ -13,12 +13,31 @@ namespace FirstName
             var names = Console.ReadLine()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var letters = Console.ReadLine()
+            var lettersInput = Console.ReadLine()
                 .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            var set = new HashSet<string>(letters);
+            var letters = new SortedSet<string>(lettersInput);
 
-            //Console.WriteLine(names.FirstOrDefault(n => n.StartsWith()));
+            var name = string.Empty;
+            foreach (var letter in letters)
+            {
+                name = names
+                    .FirstOrDefault(w => w.ToLower()
+                        .StartsWith(letter.ToLower()));
+
+                if (name == null)
+                {
+                    continue;
+                }
+
+                Console.WriteLine(name);
+                break;
+            }
+
+            if (name == null)
+            {
+                Console.WriteLine("No match");
+            }
         }
     }
 }
