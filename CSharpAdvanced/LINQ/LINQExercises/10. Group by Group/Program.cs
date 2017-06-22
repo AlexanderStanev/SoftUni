@@ -30,13 +30,21 @@ namespace GroupByGroup
                 input = Console.ReadLine();
             }
 
-            listOfStudents
-                .OrderBy(x => x.Group)
-                .ToList()
+            var groups = listOfStudents
                 .GroupBy(x => x.Group)
-                .ToList()
-                .ForEach(x=> Console.WriteLine($"{x.Key} - "));
+                .OrderBy(gr=>gr.Key);
 
+            foreach (var group in groups)
+            {
+                Console.Write(group.Key + " - ");
+                var sb = new StringBuilder();
+                foreach (var person in group)
+                {
+                    sb.Append(person.Name).Append(", ");
+                }
+                sb.Length -= 2;
+                Console.WriteLine(sb);
+            }
         }
     }
 
