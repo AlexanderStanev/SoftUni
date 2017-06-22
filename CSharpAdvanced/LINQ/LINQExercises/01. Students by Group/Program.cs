@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StudentsGroup
 {
@@ -10,15 +8,22 @@ namespace StudentsGroup
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine()
-                .Split(new [] { ' ' },StringSplitOptions.RemoveEmptyEntries);
+            var input = Console.ReadLine();
+            var studentRecords = new List<string[]>();
 
-            while (input[0] != "END")
+            while (input != "END")
             {
-                var firstName = input[0];
-                var secondName = input[1];
-                var group = input[2];
+                var tokens = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                studentRecords.Add(tokens);
+
+                input = Console.ReadLine();
             }
+
+            studentRecords
+                .Where(x => x[2] == "2")
+                .OrderBy(x => x[0])
+                .ToList()
+                .ForEach(x => Console.WriteLine(x[0] + " " + x[1]));
         }
     }
 }
