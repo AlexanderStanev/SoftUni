@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Class Box", "01. Class Box\01. Class Box.csproj", "{807B8431-CCE2-4D7D-96A8-CCE730EC8019}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Shopping Spree", "04. Shopping Spree\04. Shopping Spree.csproj", "{1EC28DA5-2BBD-438F-84A2-A5F8F8F8C877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Animal Farm", "AnimalFarm\AnimalFarm\03. Animal Farm.csproj", "{32AEC171-3440-43ED-822B-E7F89C5A8651}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{807B8431-CCE2-4D7D-96A8-CCE730EC8019}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807B8431-CCE2-4D7D-96A8-CCE730EC8019}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807B8431-CCE2-4D7D-96A8-CCE730EC8019}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807B8431-CCE2-4D7D-96A8-CCE730EC8019}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC28DA5-2BBD-438F-84A2-A5F8F8F8C877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC28DA5-2BBD-438F-84A2-A5F8F8F8C877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC28DA5-2BBD-438F-84A2-A5F8F8F8C877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC28DA5-2BBD-438F-84A2-A5F8F8F8C877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AEC171-3440-43ED-822B-E7F89C5A8651}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
